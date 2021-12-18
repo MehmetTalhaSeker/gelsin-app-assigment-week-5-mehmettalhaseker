@@ -24,9 +24,7 @@ const addComment = Joi.object({
 });
 
 //! ÖDEV Joi ile File Validation konusunu araştıralım..
-const addMedia = Joi.object({
-  file: Joi.string().required(), //! Böyle bir kullanım mevcut mudur?
-});
+const addMedia = Joi.any().meta({ index: true }).required()
 
 module.exports = {
   createProduct,
